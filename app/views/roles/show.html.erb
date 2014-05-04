@@ -1,1 +1,26 @@
-<pre><%= @role.to_yaml %></pre>
+
+<div class="page-header">
+  <h1>Roles</h1>
+</div>
+
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= @role.character_name %></h3>
+        </div>
+        <div class="panel-body">
+          <dl>
+            <dt>Movie</dt>
+            <dd><%= Movie.find_by(:id => @role.movie_id).title %></dd>
+
+            <dt>Actor</dt>
+            <dd><%= Actor.find_by(:id => @role.actor_id).name %></dd>
+
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+

@@ -9,5 +9,6 @@ class RolesController < ApplicationController
     # Store the role in the @role instance variable so the view can format it
 
     # @role = ???
+    @role = Role.find_by(:id => params[:id])
   end
 end
