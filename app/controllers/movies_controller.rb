@@ -9,5 +9,9 @@ class MoviesController < ApplicationController
     # Store the movie in the @movie instance variable so the view can format it
 
     # @movie = ???
+    id = params[:id]
+    @movie = Movie.find_by({:id => params[:id]})
+    @director_movie = Director.find_by(:id => @movie.director_id)
+
   end
 end
